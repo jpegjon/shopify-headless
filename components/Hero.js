@@ -1,23 +1,26 @@
-import Link from 'next/link'
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="my-48 mx-auto max-w-7xl px-4 sm:mt-24 md:mt-72 text-center">
-      <h1 className="font-extrabold text-gray-900">
-        <p className="text-xl sm:text-3xl md:text-4xl">Shopify + Next.js + Tailwind:</p>
-        <p className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-4xl sm:text-6xl md:text-7xl">Modern eCommerce</p>
-      </h1>
-      <h2 className="mt-3 max-w-md mx-auto text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-x-3xl">
-        Build the eCommerce Revolution.
-      </h2>
-      <div className="mt-5 max-w-md mx-auto flex justify-center items-center md:mt-8">
-        <a href="https://buildnextshop.com" className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium py-3 border-transparent rounded-md text-white bg-gray-900 hover:bg-gray-800">
-          Enroll Now
-        </a>
-        <a href="https://buildnextshop.com" className="inline-flex items-center font-semibold text-gray-900 hover:text-gray-800">
-          Learn more
-        </a>
+    <div className="relative h-[400px] sm:h-[500px] lg:h-[700px] xl:h-[900px] 2xl:h[1100px]">
+      <Image
+        src="https://cdn.shopify.com/s/files/1/0041/3951/6013/files/desert-home.jpg?v=1642318335"
+        layout="fill"
+        objectFit="cover"
+      />
+      <div className="absolute top-1/2 w-full text-center">
+        <h1 className="text-7xl text-white drop-shadow-2xl">
+          Think fluffy thoughts.
+        </h1>
+        <p className="text-white text-shadow-2xl">
+          Sleep better now with our premium quality bedding, expertly crafted by
+          the world’s finest artisans.
+        </p>
+        <button className="text-gray-100 bg-gray-800 px-10 py-4 shadow-md my-3 hover:shadow-xl active:scale-90 transition duration-150">
+          Shop the look
+        </button>
       </div>
     </div>
-  )
+  );
 }
